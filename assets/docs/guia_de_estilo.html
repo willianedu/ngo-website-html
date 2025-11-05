@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Estilo | ONG União Social</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1.5rem;
+        }
+        h1, h2 {
+            color: #005A9C;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .color-grid, .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+        }
+        .color-card, .responsive-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .color-swatch {
+            height: 100px;
+        }
+        .color-info, .responsive-card h3 {
+            padding: 1rem;
+            margin: 0;
+            font-size: 1rem;
+        }
+        .color-info h3 {
+            margin: 0 0 0.5rem 0;
+        }
+        .color-info code {
+            font-size: 0.85rem;
+            color: #555;
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+        .responsive-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+        .responsive-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .type-scale {
+            list-style: none;
+            padding: 0;
+        }
+        .type-scale li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .type-scale li:last-child {
+            border-bottom: none;
+        }
+        .type-sample {
+            margin-right: 2rem;
+        }
+        .type-info {
+            text-align: right;
+            color: #666;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        .type-info code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* Font Sizes */
+        .sample-sm { font-size: 0.8rem; }
+        .sample-md { font-size: 1rem; }
+        .sample-lg { font-size: 1.5rem; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;}
+        .sample-xl { font-size: 2.25rem; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;}
+        .sample-xxl { font-size: 3rem; font-family: 'Montserrat', sans-serif; font-weight: 700; color: #333;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Guia de Estilo</h1>
+            <p>Este documento define os padrões visuais para o site da ONG União Social.</p>
+        </header>
+
+        <section>
+            <h2>Paleta de Cores</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #005A9C;"></div>
+                    <div class="color-info">
+                        <h3>Primary</h3>
+                        <code>#005A9C</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #2E8B57;"></div>
+                    <div class="color-info">
+                        <h3>Secondary</h3>
+                        <code>#2E8B57</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #FDB813;"></div>
+                    <div class="color-info">
+                        <h3>Accent</h3>
+                        <code>#FDB813</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #333333;"></div>
+                    <div class="color-info">
+                        <h3>Dark</h3>
+                        <code>#333333</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #FFFFFF; border-bottom: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <h3>Light</h3>
+                        <code>#FFFFFF</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #f8f9fa; border-bottom: 1px solid #eee;"></div>
+                    <div class="color-info">
+                        <h3>Light Gray</h3>
+                        <code>#f8f9fa</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #5CB85C;"></div>
+                    <div class="color-info">
+                        <h3>Success</h3>
+                        <code>#5CB85C</code>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background-color: #D9534F;"></div>
+                    <div class="color-info">
+                        <h3>Danger</h3>
+                        <code>#D9534F</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tipografia</h2>
+            <ul class="type-scale">
+                <li>
+                    <span class="type-sample sample-xxl">Título XXL</span>
+                    <span class="type-info"><code>--font-size-xxl</code> (3rem)</span>
+                </li>
+                <li>
+                    <span class="type-sample sample-xl">Título XL</span>
+                    <span class="type-info"><code>--font-size-xl</code> (2.25rem)</span>
+                </li>
+                 <li>
+                    <span class="type-sample sample-lg">Título LG</span>
+                    <span class="type-info"><code>--font-size-lg</code> (1.5rem)</span>
+                </li>
+                 <li>
+                    <span class="type-sample sample-md">Corpo de texto (Padrão)</span>
+                    <span class="type-info"><code>--font-size-md</code> (1rem)</span>
+                </li>
+                 <li>
+                    <span class="type-sample sample-sm">Texto pequeno / Legenda</span>
+                    <span class="type-info"><code>--font-size-sm</code> (0.8rem)</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Layouts Responsivos</h2>
+            <p>O site foi construído com uma abordagem "mobile-first" e se adapta a uma variedade de tamanhos de tela para garantir uma experiência de usuário consistente em todos os dispositivos.</p>
+            <div class="responsive-grid">
+                <div class="responsive-card">
+                    <img src="https://i.imgur.com/4p0ADQ1.png" alt="Visualização do site em desktop">
+                    <h3>Desktop (> 992px)</h3>
+                </div>
+                <div class="responsive-card">
+                    <img src="https://i.imgur.com/B9uQVIH.jpeg" alt="Visualização do site em tablet">
+                    <h3>Tablet (< 992px)</h3>
+                </div>
+                <div class="responsive-card">
+                    <img src="https://i.imgur.com/mHtgKtt.png" alt="Visualização do site em mobile">
+                    <h3>Mobile (< 768px)</h3>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>

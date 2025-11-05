@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,7 +18,14 @@
                 <ul class="header__nav-links" id="nav-links">
                     <li><a href="index.html" class="header__nav-link">Início</a></li>
                     <li><a href="sobre.html" class="header__nav-link">Sobre Nós</a></li>
-                    <li><a href="projetos.html" class="header__nav-link active">Projetos</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="projetos.html" class="header__nav-link active">Projetos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html#seguranca_alimentar">Segurança Alimentar</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#qualidade_vida">Qualidade de Vida</a></li>
+                        </ul>
+                    </li>
                     <li><a href="voluntariado.html" class="header__nav-link">Voluntariado</a></li>
                     <li><a href="doacoes.html" class="header__nav-link">Doações</a></li>
                     <li><a href="transparencia.html" class="header__nav-link">Transparência</a></li>
@@ -25,11 +33,14 @@
                     <li><a href="blog.html" class="header__nav-link">Blog</a></li>
                 </ul>
             </nav>
-            <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Alternar modo escuro">🌙</button>
+                <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -44,22 +55,22 @@
         <section class="section">
             <div class="container">
                 <h2 class="section__title">Conheça Nossas Iniciativas</h2>
-                <article class="project-article">
+                <article class="project-article" id="seguranca_alimentar">
                     <h3 class="project-article__title">1. Segurança Alimentar</h3>
                     <p class="project-article__text">Acreditamos que o acesso à alimentação de qualidade é um direito fundamental. Nossos projetos de segurança alimentar visam combater a fome e a desnutrição em comunidades vulneráveis através da organização de cozinhas comunitárias, que oferecem refeições nutritivas, e da distribuição regular de cestas básicas para famílias cadastradas.</p>
                 </article>
                 <hr class="separator">
-                <article class="project-article">
+                <article class="project-article" id="capacitacao">
                     <h3 class="project-article__title">2. Capacitação e Empregabilidade</h3>
                     <p class="project-article__text">Para quebrar o ciclo da pobreza, investimos na capacitação de jovens e adultos. Através de parcerias com empresas e instituições de ensino, oferecemos cursos profissionalizantes em áreas de alta demanda, além de oficinas de informática e preparação para o mercado de trabalho, aumentando as chances de empregabilidade e geração de renda.</p>
                 </article>
                 <hr class="separator">
-                <article class="project-article">
+                <article class="project-article" id="qualidade_vida">
                     <h3 class="project-article__title">3. Qualidade de Vida Urbana</h3>
                     <p class="project-article__text">Uma comunidade forte se desenvolve em um ambiente saudável e acolhedor. Nossos mutirões mobilizam voluntários para a revitalização de espaços públicos, como praças e parques, a criação de hortas comunitárias que fornecem alimentos frescos e a implementação de projetos de reciclagem que promovem a consciência ambiental e geram renda para catadores.</p>
                 </article>
                 <hr class="separator">
-                <article class="project-article">
+                <article class="project-article" id="apoio_emergencial">
                     <h3 class="project-article__title">4. Apoio Emergencial</h3>
                     <p class="project-article__text">Estamos atentos às necessidades sazonais e emergenciais da nossa comunidade. Realizamos campanhas pontuais para enfrentar desafios específicos, como a "Campanha do Agasalho" no inverno, que arrecada roupas quentes para proteger do frio, e a campanha de arrecadação de material escolar no início do ano letivo, garantindo que as crianças tenham o necessário para estudar.</p>
                 </article>

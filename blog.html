@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,7 +19,14 @@
                 <ul class="header__nav-links" id="nav-links">
                     <li><a href="index.html" class="header__nav-link">Início</a></li>
                     <li><a href="sobre.html" class="header__nav-link">Sobre Nós</a></li>
-                    <li><a href="projetos.html" class="header__nav-link">Projetos</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="projetos.html" class="header__nav-link">Projetos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="projetos.html#seguranca_alimentar">Segurança Alimentar</a></li>
+                            <li><a href="projetos.html#capacitacao">Capacitação</a></li>
+                            <li><a href="projetos.html#qualidade_vida">Qualidade de Vida</a></li>
+                        </ul>
+                    </li>
                     <li><a href="voluntariado.html" class="header__nav-link">Voluntariado</a></li>
                     <li><a href="doacoes.html" class="header__nav-link">Doações</a></li>
                     <li><a href="transparencia.html" class="header__nav-link">Transparência</a></li>
@@ -25,11 +34,14 @@
                     <li><a href="blog.html" class="header__nav-link active">Blog</a></li>
                 </ul>
             </nav>
-            <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="header__actions">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Alternar modo escuro">🌙</button>
+                <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -43,8 +55,14 @@
 
         <section class="section">
             <div class="container">
-                <h2 class="section__title">Em Breve</h2>
+                <h2 class="section__title">Em Breve <span class="badge">Novo</span></h2>
                 <p class="section__text">Estamos preparando conteúdo novo para você. Volte em breve para conferir as últimas novidades e histórias de impacto da ONG União Social!</p>
+                
+                <div style="max-width: 600px; margin: 2rem auto;">
+                    <div class="alert alert-success">Mensagem de sucesso!</div>
+                    <div class="alert alert-danger">Mensagem de erro!</div>
+                </div>
+
             </div>
         </section>
     </main>
