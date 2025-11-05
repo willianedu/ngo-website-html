@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início | ONG União Social</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<script type="importmap">
+{
+  "imports": {
+    "url": "https://aistudiocdn.com/url@^0.11.4",
+    "vite": "https://aistudiocdn.com/vite@^7.1.12"
+  }
+}
+</script>
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
@@ -26,7 +34,7 @@
                     <li><a href="blog.html" class="header__nav-link">Blog</a></li>
                 </ul>
             </nav>
-            <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+            <button class="header__menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,7 +55,9 @@
             <div class="container">
                 <h2 class="section__title">Nossa Missão</h2>
                 <p class="section__text">Através de uma rede de voluntários engajados, damos assistência a pessoas em situação de vulnerabilidade e desenvolvemos projetos que promovem a segurança alimentar, a capacitação profissional e a melhoria da qualidade de vida em nossos bairros. Nosso trabalho é feito por pessoas, para pessoas. Junte-se a nós e faça parte dessa transformação.</p>
-                <a href="sobre.html" class="btn btn--secondary">Saiba Mais Sobre Nós</a>
+                <div class="section__cta">
+                    <a href="sobre.html" class="btn btn--secondary">Saiba Mais Sobre Nós</a>
+                </div>
             </div>
         </section>
 
@@ -123,7 +133,7 @@
             <p>&copy; 2024 ONG União Social. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <script type="module" src="index.tsx"></script>
+    <script type="module" src="assets/js/index.tsx"></script>
 <script type="module" src="/index.tsx"></script>
 </body>
 </html>
