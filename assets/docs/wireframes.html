@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframes - ONG União Social</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            line-height: 1.6; 
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: auto;
+            padding: 2rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1, h2 { 
+            color: #005A9C; 
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: auto;
+            color: #555;
+        }
+
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .wireframe-card {
+            display: block;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-decoration: none;
+            color: inherit;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .wireframe-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .wireframe-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #eee;
+        }
+
+        .wireframe-card h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            padding: 1rem 1.25rem;
+            color: #005A9C;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Wireframes do Projeto</h1>
+            <p>Esta seção contém os wireframes (esboços de baixa fidelidade) para as principais páginas do site da ONG União Social. O objetivo é planejar a estrutura, o layout e a disposição dos elementos antes do design visual detalhado.</p>
+        </header>
+        
+        <div class="wireframe-grid">
+            <a href="wireframe-home.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-home.png" alt="Wireframe da Página Inicial">
+                <h3>Página Inicial</h3>
+            </a>
+            <a href="wireframe-sobre.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-sobre.png" alt="Wireframe da Página Sobre Nós">
+                <h3>Sobre Nós</h3>
+            </a>
+            <a href="wireframe-projetos.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-projetos.png" alt="Wireframe da Página de Projetos">
+                <h3>Projetos</h3>
+            </a>
+            <a href="wireframe-voluntariado.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-voluntariado.png" alt="Wireframe da Página de Voluntariado">
+                <h3>Voluntariado</h3>
+            </a>
+            <a href="wireframe-contato.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-contato.png" alt="Wireframe da Página de Contato">
+                <h3>Contato</h3>
+            </a>
+            <a href="wireframe-transparencia.html" target="_blank" class="wireframe-card">
+                <img src="images_W3C-Validator/wireframe-transparencia.png" alt="Wireframe da Página de Transparência">
+                <h3>Transparência</h3>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

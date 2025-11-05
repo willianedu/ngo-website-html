@@ -290,8 +290,9 @@ ul {
 
 /* --- Forms --- */
 .form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 2rem auto;
+    text-align: left;
 }
 
 .form__group {
@@ -304,18 +305,76 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-.form__input, .form__textarea {
+.form__input, .form__textarea, .form select {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: var(--border-radius);
     font-family: var(--font-body);
     font-size: 1rem;
+    background-color: var(--light-color);
 }
 
 .form__textarea {
     resize: vertical;
 }
+
+.form__input[type="file"] {
+    padding: 0.5rem;
+}
+
+.form__input[type="file"]::file-selector-button {
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.5em 1em;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--light-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    margin-right: 1rem;
+}
+.form__input[type="file"]::file-selector-button:hover {
+    background-color: var(--bg-light-gray);
+}
+
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+legend {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    margin-left: 1rem;
+    font-size: 1.25rem;
+}
+
+.form__group--options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background-color: var(--bg-light-gray);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+.form__option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+.form__option input[type="checkbox"],
+.form__option input[type="radio"] {
+    width: auto;
+    accent-color: var(--primary-color);
+}
+
 
 /* --- Specific Page Styles --- */
 .project-article {
@@ -368,7 +427,7 @@ ul {
 
 .footer__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
     padding-bottom: 3rem;
 }
@@ -395,6 +454,138 @@ ul {
     text-align: center;
     padding: 1.5rem 0;
 }
+
+.footer-form .form__input {
+    background-color: #555;
+    color: var(--light-color);
+    border-color: #777;
+    margin-bottom: 0.5rem;
+}
+.footer-form .form__input::placeholder {
+    color: #bbb;
+}
+.footer-form .form__group {
+    margin-bottom: 0.5rem;
+}
+.footer-form .btn {
+    width: 100%;
+}
+.form__label--small {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+.form__group--options-horizontal {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* --- Multimedia Styles (Video, Audio, Gallery) --- */
+
+/* Video Container */
+.video-container {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Ensures the video respects the border-radius */
+}
+
+.responsive-video {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes bottom space under the video */
+}
+
+/* Audio Testimonials */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+.testimonial-card {
+    background-color: var(--light-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.testimonial-card__title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--dark-color);
+}
+
+.testimonial-card__audio {
+    width: 100%;
+}
+
+/* Photo Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1; /* Creates square gallery items */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    z-index: 10;
+    position: relative;
+}
+
+.gallery-item picture,
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the container without distortion */
+}
+
+/* --- Charts Section (Canvas) --- */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.chart-card {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.chart-card h3 {
+    margin-bottom: 0.5rem;
+}
+.chart-card p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.chart-card canvas {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
@@ -456,5 +647,10 @@ ul {
     }
     .header__menu-toggle.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.5rem;
     }
 }

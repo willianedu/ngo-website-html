@@ -54,6 +54,36 @@
                 </ul>
             </div>
         </section>
+
+        <section class="section section--light" id="graficos">
+            <div class="container">
+                <h2 class="section__title">Nossos Números em Gráficos</h2>
+                <p class="section__text">Visualizamos nossos dados para que você possa entender nosso impacto de forma clara e rápida. Os gráficos abaixo representam nossa dedicação e o resultado do apoio de todos.</p>
+                <div class="charts-grid">
+                    <article class="chart-card">
+                        <h3>Distribuição de Recursos</h3>
+                        <p>Como cada real doado é investido.</p>
+                        <canvas id="graficoPizza" width="400" height="400">
+                            Gráfico de pizza mostrando a distribuição de recursos.
+                        </canvas>
+                    </article>
+                    <article class="chart-card">
+                        <h3>Evolução de Voluntários</h3>
+                        <p>O crescimento da nossa rede de apoio.</p>
+                        <canvas id="graficoLinha" width="400" height="400">
+                            Gráfico de linha mostrando a evolução do número de voluntários.
+                        </canvas>
+                    </article>
+                    <article class="chart-card">
+                        <h3>Impacto por Região</h3>
+                        <p>Famílias atendidas em cada área da cidade.</p>
+                        <canvas id="graficoBarras" width="400" height="400">
+                            Gráfico de barras mostrando o impacto por região.
+                        </canvas>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -75,6 +105,23 @@
                 <h4 class="footer__title">Contato</h4>
                 <p>Rua Fictícia, 123, Centro<br>São Paulo, SP, 01000-000</p>
                 <p>contato@uniaosocial.org</p>
+            </div>
+            <div class="footer__col">
+                <h4 class="footer__title">Newsletter</h4>
+                <p>Receba nossas novidades em seu e-mail.</p>
+                <form action="#" class="footer-form">
+                    <div class="form__group">
+                        <input type="email" name="newsletter_email" class="form__input" placeholder="Seu melhor e-mail" required>
+                    </div>
+                    <div class="form__group">
+                         <p class="form__label--small">Preferências:</p>
+                         <div class="form__group--options-horizontal">
+                            <label class="form__option"><input type="checkbox" name="prefs" value="geral"> Notícias</label>
+                            <label class="form__option"><input type="checkbox" name="prefs" value="voluntariado"> Voluntariado</label>
+                         </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Inscrever-se</button>
+                </form>
             </div>
         </div>
         <div class="footer__bottom">
