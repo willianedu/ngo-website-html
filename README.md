@@ -1,10 +1,10 @@
 # Site Institucional: ONG União Social
 
-Este repositório contém o código-fonte do site institucional fictício da **"ONG União Social"**, um projeto desenvolvido para a disciplina de **Desenvolvimento Front-End Para Web**.
+Este repositório contém o código-fonte do site institucional fictício da **"ONG União Social"**. O projeto foi construído utilizando tecnologias web modernas para criar uma experiência de usuário responsiva, acessível e interativa.
 
-O objetivo principal deste projeto é aplicar os conceitos fundamentais e avançados de **HTML5** para construir a estrutura completa de um site moderno, semântico e acessível, com foco especial em formulários complexos e recursos multimídia.
+O objetivo é demonstrar a aplicação de conceitos de desenvolvimento front-end, desde a estruturação semântica com **HTML5** e estilização avançada com **CSS3**, até a implementação de interatividade com **TypeScript** e o uso de um ambiente de desenvolvimento moderno com **Vite**.
 
-**Status do Projeto:** Estrutura HTML e CSS base concluídas. Próximos passos envolvem a implementação da lógica JavaScript para os gráficos.
+**Status do Projeto:** A estrutura do site, estilização e funcionalidades interativas principais (menu de navegação responsivo, modo escuro) estão concluídas. O próximo passo é a implementação da lógica para renderizar os gráficos na página de transparência.
 
 ---
 
@@ -14,7 +14,7 @@ A **ONG União Social** é uma organização fictícia cuja missão é conectar 
 
 ## Escopo do Projeto
 
-Este projeto consiste na criação de um site estático de 8 páginas, implementando uma variedade de recursos do HTML5.
+Este projeto consiste na criação de um site estático de 8 páginas, implementando uma variedade de recursos modernos.
 
 * **Páginas Criadas:**
     * `index.html` (Página Inicial)
@@ -24,43 +24,75 @@ Este projeto consiste na criação de um site estático de 8 páginas, implement
     * `doacoes.html` (Informações para doação)
     * `transparencia.html` (Relatórios e espaço para Gráficos)
     * `contato.html` (Formulário de contato e informações)
-    * `blog.html` (Página de blog/notícias, atualmente com placeholder)
+    * `blog.html` (Página de blog/notícias)
 
 ## Principais Tecnologias e Conceitos Aplicados
 
-O foco principal é a **estrutura HTML5 e estilização com CSS**.
-
-* **HTML5 Semântico:** Uso correto de tags como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` e `<footer>` para estruturar o conteúdo.
-* **Formulários Avançados:** Criação de 4 formulários complexos com validação nativa do HTML5 (uso de `pattern`, `required`, `type="date"`, etc.) para voluntariado, contato, inscrição em projetos e newsletter.
-* **Multimídia:** Integração de elementos `<video>`, `<audio>` e uma galeria de fotos.
-* **Imagens Responsivas:** Uso da tag `<picture>` para otimização de imagens na galeria.
-* **Desempenho:** Implementação de `loading="lazy"` (Lazy Loading) para imagens da galeria.
-* **Gráficos:** Uso da tag `<canvas>` como placeholder para a exibição de gráficos de pizza, linha e barras na página de transparência.
-* **CSS Moderno:** Utilização de Variáveis CSS, Flexbox e Grid Layout para criar um design responsivo e de fácil manutenção.
+*   **HTML5 Semântico:** Uso correto de tags como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` e `<footer>` para estruturar o conteúdo de forma clara e acessível.
+*   **CSS3 Moderno:**
+    *   **Variáveis CSS (Custom Properties):** Para um tema flexível e de fácil manutenção, incluindo um modo escuro.
+    *   **Flexbox e Grid Layout:** Para a criação de layouts complexos e responsivos.
+    *   **Design Responsivo:** O site se adapta a diferentes tamanhos de tela, de dispositivos móveis a desktops.
+*   **TypeScript:** Utilizado para adicionar interatividade ao site, como o menu de navegação móvel e o seletor de tema (claro/escuro), garantindo um código mais robusto e manutenível.
+*   **Vite:** Um ambiente de desenvolvimento rápido e moderno que oferece Hot Module Replacement (HMR) e otimiza o build para produção.
+*   **Recursos Avançados de HTML:**
+    *   **Formulários Complexos:** 4 formulários com validação nativa do HTML5 (`pattern`, `required`, etc.).
+    *   **Multimídia:** Integração de elementos `<video>` e `<audio>`.
+    *   **Imagens Responsivas:** Uso da tag `<picture>` para otimizar a entrega de imagens.
+    *   **Desempenho:** Implementação de `loading="lazy"` para o carregamento otimizado de imagens.
+    *   **Gráficos:** Uso da tag `<canvas>` como placeholder para visualização de dados.
 
 ## Estrutura de Pastas
 
-O projeto segue uma estrutura de pastas padrão para desenvolvimento web, separando páginas, recursos (assets) e documentação.
+O projeto segue uma estrutura organizada para facilitar a manutenção e o desenvolvimento.
 
 ```
 /
 ├── index.html
 ├── sobre.html
-├── projetos.html
-├── ... (outras páginas HTML)
+├── ... (outras páginas)
+├── package.json
+├── vite.config.ts
+├── tsconfig.json
 └── assets/
     ├── css/
     │   └── index.css
     ├── js/
     │   └── index.tsx
     └── docs/
-        ├── wireframes.html (e arquivos de wireframes individuais)
-        └── relatorio-validacao-w3c.html
+        ├── ... (documentação e wireframes)
 ```
+
+## Como Executar o Projeto
+
+Para executar o projeto localmente, você precisará ter o [Node.js](https://nodejs.org/) instalado.
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/ong-uniao-social.git
+    cd ong-uniao-social
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Execute o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
+    O site estará disponível em `http://localhost:3000` (ou outra porta, se a 3000 estiver em uso).
+
+4.  **Para gerar a versão de produção:**
+    ```bash
+    npm run build
+    ```
+    Os arquivos otimizados serão gerados na pasta `dist/`.
 
 ## Documentação Técnica
 
-A documentação do projeto, incluindo os wireframes e o relatório de validação W3C, está localizada na pasta `/assets/docs/`. Estes são arquivos de modelo que devem ser preenchidos com os artefatos reais do projeto.
+A documentação do projeto, incluindo os wireframes e o relatório de validação W3C, está localizada na pasta `/assets/docs/`.
 
 *   **`/assets/docs/wireframes.html`**: Contém os esboços de baixa fidelidade das principais páginas.
 *   **`/assets/docs/relatorio-validacao-w3c.html`**: Serve como um guia e local para inserir as capturas de tela da validação de código no validador oficial do W3C.
